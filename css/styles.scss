@@ -1,0 +1,229 @@
+
+@use 'sass:math'; 
+
+$ff-Poppins: 'Poppins';
+$ff-OpenSans: 'Open Sans';
+$font-size: 16px;
+
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+/*Convert pixels to rem*/
+/*use toRem(400px) --> 25rem */
+@function toRem($value) {    
+    @return math.div($value, 16px) * 1rem;
+}
+
+@font-face {
+    font-family: $ff-Poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: $ff-Poppins;    
+    src: url('../fonts/Poppins-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $ff-OpenSans;
+    src: url('../fonts/OpenSans-VariableFont_wdth_wght.ttf');
+    font-weight: 400;
+}
+
+body {
+    background-image: url('../images/bg-desktop.svg');
+    color: white;       
+    background-color: $violet;
+    background-repeat: no-repeat;    
+    background-size: cover;
+    font-family: $ff-OpenSans;
+    font-size: $font-size;    
+    font-weight: 400;
+}
+
+.main {
+    padding: toRem(60px);    
+    max-width: toRem(1296px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    margin-bottom: toRem(50px);
+}
+
+.header-text {
+    font-family: $ff-Poppins;
+    font-weight: 600;    
+    font-size: 2.5rem;
+    line-height: normal;    
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;    
+}
+
+.text-content {
+    
+    padding-left: toRem(45px);     
+    padding-right: toRem(35px);    
+    font-size: 1.1rem;
+    line-height: 1.5em;                
+}
+
+.btn-register {
+    color: $violet;
+    background-color: white;
+    padding: toRem(15px) toRem(75px) toRem(15px) toRem(75px);
+    border-radius: toRem(25px);
+    border-style: none;
+    display: block;
+    margin-top: toRem(25px);
+    font-size: 1.0rem;    
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+.btn-register:hover {
+    color: white;
+    background-color: $soft-magenta;
+    cursor: pointer;
+}
+
+.icon-footer {
+    display: flex;
+    flex-direction: row;    
+    float: right;
+    padding-right: toRem(85px);
+    margin-top: toRem(25px);
+}
+
+.icon-span {
+
+    border-style: solid;
+    border-color: white;
+    border-width: toRem(1px);
+
+}
+
+.icon-span:hover {
+    border-color: $soft-magenta;
+    color: $soft-magenta;
+    cursor: pointer;
+}
+
+.icon-circle-facebook {
+        
+    padding: toRem(8px) toRem(12px) toRem(8px) toRem(12px);
+    border-radius: toRem(50px);
+    margin-right: toRem(15px);
+
+}
+
+.icon-circle-twitter
+{
+    
+    padding: toRem(8px) toRem(9px) toRem(8px) toRem(9px);
+    border-radius: toRem(70px);
+    margin-right: toRem(15px);
+}
+
+.icon-circle-instagram {
+        
+    padding: toRem(8px) toRem(10px) toRem(8px) toRem(10px);
+    border-radius: toRem(50px);
+
+}
+
+@media only screen and (min-width: toRem(375px)) and (max-width: toRem(1024px))
+{
+    body {
+        background-image: url('../images/bg-mobile.svg');        
+        background-size: contain;        
+    }
+
+    .content-container {        
+        flex-direction: column;        
+    }
+
+    .main {        
+        padding: toRem(20px);
+        max-width: toRem(375px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text-content {
+        margin-top: toRem(35px);        
+        font-size: 0.9rem;        
+        padding-left: toRem(22px);
+        padding-right: toRem(22px);
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 100%;
+    }
+
+    .logo {
+        margin-bottom: toRem(50px);
+        width: toRem(125px);
+    }
+
+    .header-text {        
+        font-size: 1.5rem;   
+        text-align: center; 
+    }
+
+    .btn-register {
+        
+        margin-top: toRem(25px);
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+        
+    }
+
+    .icon-footer {
+        margin-top: toRem(75px);
+        padding-right: toRem(80px);
+        padding-left: toRem(80px);
+        float: inherit;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-evenly;
+    }
+
+    
+
+}
+
+/* Frontend Mentor IO Attribution Rules */
+.attribution { 
+    font-size: 11px; 
+    text-align: center;     
+    margin-top: toRem(55px);
+    /*Extra*/ 
+    padding: toRem(10px);
+    background-color: rgba(255,255,255, 0.6);
+    color: $violet;
+    width: toRem(300px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: toRem(10px);    
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.attribution:hover {
+    background-color: rgba(255,255,255, 1.0);
+}
+
+.attribution a { 
+    color: hsl(300, 69%, 71%); 
+}

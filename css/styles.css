@@ -1,0 +1,199 @@
+/*Convert pixels to rem*/
+/*use toRem(400px) --> 25rem */
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-VariableFont_wdth_wght.ttf");
+  font-weight: 400;
+}
+body {
+  background-image: url("../images/bg-desktop.svg");
+  color: white;
+  background-color: #674baf;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.main {
+  padding: 3.75rem;
+  max-width: 81rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  margin-bottom: 3.125rem;
+}
+
+.header-text {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: normal;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-content {
+  padding-left: 2.8125rem;
+  padding-right: 2.1875rem;
+  font-size: 1.1rem;
+  line-height: 1.5em;
+}
+
+.btn-register {
+  color: #674baf;
+  background-color: white;
+  padding: 0.9375rem 4.6875rem 0.9375rem 4.6875rem;
+  border-radius: 1.5625rem;
+  border-style: none;
+  display: block;
+  margin-top: 1.5625rem;
+  font-size: 1rem;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.btn-register:hover {
+  color: white;
+  background-color: #e882e8;
+  cursor: pointer;
+}
+
+.icon-footer {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  padding-right: 5.3125rem;
+  margin-top: 1.5625rem;
+}
+
+.icon-span {
+  border-style: solid;
+  border-color: white;
+  border-width: 0.0625rem;
+}
+
+.icon-span:hover {
+  border-color: #e882e8;
+  color: #e882e8;
+  cursor: pointer;
+}
+
+.icon-circle-facebook {
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  border-radius: 3.125rem;
+  margin-right: 0.9375rem;
+}
+
+.icon-circle-twitter {
+  padding: 0.5rem 0.5625rem 0.5rem 0.5625rem;
+  border-radius: 4.375rem;
+  margin-right: 0.9375rem;
+}
+
+.icon-circle-instagram {
+  padding: 0.5rem 0.625rem 0.5rem 0.625rem;
+  border-radius: 3.125rem;
+}
+
+@media only screen and (min-width: 23.4375rem) and (max-width: 64rem) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+    background-size: contain;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 1.25rem;
+    max-width: 23.4375rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-content {
+    margin-top: 2.1875rem;
+    font-size: 0.9rem;
+    padding-left: 1.375rem;
+    padding-right: 1.375rem;
+    text-align: center;
+  }
+
+  .image-content img {
+    width: 100%;
+  }
+
+  .logo {
+    margin-bottom: 3.125rem;
+    width: 7.8125rem;
+  }
+
+  .header-text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .btn-register {
+    margin-top: 1.5625rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+
+  .icon-footer {
+    margin-top: 4.6875rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    float: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+  }
+}
+/* Frontend Mentor IO Attribution Rules */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 3.4375rem;
+  /*Extra*/
+  padding: 0.625rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #674baf;
+  width: 18.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.625rem;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.attribution:hover {
+  background-color: white;
+}
+
+.attribution a {
+  color: #e882e8;
+}
+
+/*# sourceMappingURL=styles.css.map */
