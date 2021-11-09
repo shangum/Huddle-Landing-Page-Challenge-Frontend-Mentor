@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Hosted on Github Pages](#)
+- Live Site URL: [Hosted on Github Pages](https://shangum.github.io/Huddle-Landing-Page-Challenge-Frontend-Mentor/)
 
 ## My process
 
